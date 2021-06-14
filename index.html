@@ -83,19 +83,19 @@
       num += 1; // 数字を1つ進める(num = num + 1　と同じこと)
 
       // tbody内の要素<tr>(左に数字，右に"?"の行)を作成して一番下に追加する
-      const tr = document.createElement("tr");          // tr要素を作成
-      const td_num = document.createElement("td");      // td要素を作成(左の番号のところ)
-      const td_fizzbuzz = document.createElement("td"); // td要素を作成(右のfizzbuzzのところ)
+      const tr = document.createElement("tr");          // <tr>要素を作成
+      const td_num = document.createElement("td");      // <td>要素を作成(左の番号のところ)
+      const td_fizzbuzz = document.createElement("td"); // <td>要素を作成(右のfizzbuzzのところ)
       td_fizzbuzz.classList.add('question');            // 'question'classを追加
       td_num.innerHTML = num;                           // 番号を挿入
       td_fizzbuzz.innerHTML = '?';                      // 文字'?'を挿入
-      tr.appendChild(td_num);                           // 番号を入れたtd要素をtr要素に追加
-      tr.appendChild(td_fizzbuzz);                      // 文字'?'を入れたtd要素をtr要素に追加
+      tr.appendChild(td_num);                           // 番号を入れた<td>要素を<tr>要素に追加
+      tr.appendChild(td_fizzbuzz);                      // 文字'?'を入れた<td>要素を<tr>要素に追加
 
-      const screen = document.getElementById("screen"); // div要素(id=screen)を保持
-      screen.lastElementChild.lastElementChild.appendChild(tr); // table要素内の最後の要素<tbody>内の末に，番号と'?'を含むtr要素を追加
+      const screen = document.getElementById("screen"); // <div>要素(id=screen)を保持
+      screen.lastElementChild.lastElementChild.appendChild(tr); // <div>要素(id=screen)内の<table>要素内の<tbody>内の末に，番号と'?'を含むtr要素を追加
 
-      // div要素(id=screen)を一番下までスクロール
+      // <div>要素(id=screen)内を一番下までスクロール
       screen.scrollTop = screen.scrollHeight;
     }
   </script>
