@@ -45,7 +45,7 @@
 
 <body>
 
-  <!-- 左の表 -->
+  <!-- 上の表 -->
   <div id="screen">
     <table>
       <tbody>
@@ -65,7 +65,7 @@
 
     // ボタンをクリックした時の処理
     function onClick() {
-      let lastTd = document.querySelector(".question");; // "?"の部分を保持
+      const lastTd = document.querySelector(".question");; // "?"の部分を保持
       lastTd.classList.remove('question'); // "?"の部分の色付けのためのclassを削除
 
       // fizzbuzzの処理 変数txtに結果を格納
@@ -92,7 +92,7 @@
       tr.appendChild(td_num);                           // 番号を入れたtd要素をtr要素に追加
       tr.appendChild(td_fizzbuzz);                      // 文字'?'を入れたtd要素をtr要素に追加
 
-      let screen = document.getElementById("screen"); // div要素(id=screen)を保持
+      const screen = document.getElementById("screen"); // div要素(id=screen)を保持
       screen.lastElementChild.lastElementChild.appendChild(tr); // table要素内の最後の要素<tbody>内の末に，番号と'?'を含むtr要素を追加
 
       // div要素(id=screen)を一番下までスクロール
